@@ -22,7 +22,7 @@ class AliyunOssServiceProvider extends ServiceProvider
     {
         Storage::extend('oss', function ($app, $config) {
             $accessId = $config['access_key'];
-            $accessKey = $config['access_secret'];
+            $accessKey = $config['secret_key'];
             $endPoint = $config['endpoint'];
             $bucket = $config['bucket'];
             $prefix = null;
