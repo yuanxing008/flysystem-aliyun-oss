@@ -23,13 +23,5 @@
         }
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-master"
-        },
-        "laravel": {
-            "providers": [
-                "Zsimple\\Flysystem\\AliyunOss\\ServiceProvider"
-            ]
-        }
     }
 }
