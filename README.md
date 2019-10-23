@@ -5,6 +5,12 @@ league/flysystem-aws-s3-v3 like package but for aliyun oss(Object Storage Servic
 
 ## Tips:
 
+已上传至composer镜像
+
+```
+composer require yuanxing008/flysystem-aliyun-oss
+```
+
 上传的时候指定文件下载时的文件名(Laravel 5.4以后可用，之前版本的put方法第三个参数只能设置public/private)：
 
 ```
