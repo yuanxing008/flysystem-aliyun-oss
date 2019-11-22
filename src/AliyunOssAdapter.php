@@ -272,6 +272,7 @@ class AliyunOssAdapter extends AbstractAdapter implements CanOverwriteFiles
      *
      * @param string $dirname
      * @return bool
+     * @throws OssException
      */
     public function deleteDir($dirname)
     {
@@ -358,8 +359,9 @@ class AliyunOssAdapter extends AbstractAdapter implements CanOverwriteFiles
      * List contents of a directory.
      *
      * @param string $directory
-     * @param bool   $recursive
+     * @param bool $recursive
      * @return array
+     * @throws OssException
      */
     public function listContents($directory = '', $recursive = false)
     {
@@ -424,7 +426,6 @@ class AliyunOssAdapter extends AbstractAdapter implements CanOverwriteFiles
      *
      * @param string $path
      * @return array|false
-     * @throws \OSS\Core\OssException
      */
     public function getMetadata($path)
     {
@@ -451,6 +452,7 @@ class AliyunOssAdapter extends AbstractAdapter implements CanOverwriteFiles
      *
      * @param string $path
      * @return array|false
+     * @throws OssException
      */
     public function getSize($path)
     {
@@ -462,6 +464,7 @@ class AliyunOssAdapter extends AbstractAdapter implements CanOverwriteFiles
      *
      * @param string $path
      * @return array|false
+     * @throws OssException
      */
     public function getMimetype($path)
     {
@@ -473,6 +476,7 @@ class AliyunOssAdapter extends AbstractAdapter implements CanOverwriteFiles
      *
      * @param string $path
      * @return array|false
+     * @throws OssException
      */
     public function getTimestamp($path)
     {
@@ -619,10 +623,11 @@ class AliyunOssAdapter extends AbstractAdapter implements CanOverwriteFiles
     /**
      * Get a temporary URL for the file at the given path.
      *
-     * @param  string $path
-     * @param  null|\DateTimeInterface $expiration
-     * @param  array $options
+     * @param string $path
+     * @param null|\DateTimeInterface $expiration
+     * @param array $options
      * @return string
+     * @throws OssException
      */
     public function getTemporaryUrl($path, $expiration = null, $options = [])
     {

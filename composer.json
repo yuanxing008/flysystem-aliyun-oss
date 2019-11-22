@@ -1,5 +1,5 @@
 {
-    "name": "Zsimple/flysystem-aliyun-oss",
+    "name": "zsimple/flysystem-aliyun-oss",
     "description": "Flysystem adapter for the Aliyun OSS SDK",
     "license": "MIT",
     "authors": [
